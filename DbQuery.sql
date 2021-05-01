@@ -17,6 +17,7 @@ GO
 CREATE TABLE OgrenciDers(
 Id int identity(1,1) primary key,
 OgrenciId int foreign key references Ogrenciler(Id),
-DersId int foreign key references Dersler(Id)
+DersId int foreign key references Dersler(Id),
+unique(OgrenciId,DersId)
 )
 GO
